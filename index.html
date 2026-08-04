@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - Samuel</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- NAVBAR -->
+    <nav class="navbar">
+        <a href="#" class="nav-brand">Developer</a>
+        <ul class="nav-links">
+            <li><a href="#projects">Project</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- HERO BANNER -->
+    <section class="hero-banner" id="home">
+      <div class="hero-content">
+          <div class="hero-line">
+              <span class="hero-greeting">Halo, saya </span>
+              <span class="hero-name">Samuel</span>
+          </div>
+          <div class="hero-line">
+              <span class="hero-greet">Seorang </span>
+              <span class="hero-job">Programmer</span>
+          </div>
+      </div>
+
+      <div class="code-illustration">
+        <div class="floating-wrapper">
+          <svg width="260" height="260" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="15" cy="35" r="13" fill="#E06C75" class="dot dot-verti" />
+            <circle cx="120" cy="10" r="16" fill="#61AFEF" class="dot dot-horiz" />
+            <circle cx="4" cy="180" r="17" fill="#98C379" class="dot dot-diago" />
+            <circle cx="180" cy="175" r="15" stroke="#E5C07B" stroke-width="3" class="dot dot-verti" />
+            <circle cx="220" cy="60" r="14" fill="#C678DD" class="dot dot-horiz" />
+            <text x="50%" y="54%" dominant-baseline="middle" text-anchor="middle" 
+                  fill="#ffffff" font-family="'Courier New', Consolas, monospace" font-size="100" font-weight="bold">
+              &lt;/&gt;
+            </text>  
+          </svg>
+        </div>
+      </div>
+    </section>
+
+    <!-- COUNTER SECTION -->
+    <section class="counter-section">
+      <div class="counter-container">
+          <div class="counter-item">
+              <span class="counter-number" id="visitor-count">0</span>
+              <span class="counter-label">Pengunjung</span>
+          </div>
+          <div class="counter-divider"></div>
+          <div class="counter-item">
+              <span class="counter-number" id="project-count">0</span>
+              <span class="counter-label">Proyek Selesai</span>
+          </div>
+      </div>
+    </section>
+
+    <!-- TENTANG SAYA -->
+    <section class="tentang">
+      <div class="tentang-container">
+          <h2 class="tentang-judul">TENTANG SAYA</h2>
+          <p class="tentang-deskripsi">
+            Halo semuanya! Perkenalkan saya Samuel Ferdiand Pappang, pelajar dari SMK Negeri 2 Balikpapan.<br>
+            Saya adalah seorang pelajar yang memiliki ketertarikan tinggi dalam membangun tampilan web yang bersih, responsif, dan interaktif.<br> Saya selalu bersemangat untuk mengeksplorasi teknologi baru dan mengasah logika demi menciptakan proyek web yang lebih efisien.
+          </p>
+      </div>
+    </section>
+
+    <!-- PROJECT SECTION -->
+   <!-- PROJECT SECTION -->
+<section class="projects-section" id="projects">
+  <div class="projects-container">
+      
+      <!-- Judul & Link di Bawahnya -->
+      <h2 class="projects-title">P R O J E C T</h2>
+      <div class="more-projects-wrapper">
+          <a href="https://github.com/username?tab=repositories" target="_blank" class="more-projects-btn">
+              Project lainnya &rarr;
+          </a>
+      </div>
+
+      <!-- Grid 4 Proyek -->
+      <div class="projects-grid" id="projects-grid"></div>
+
+  </div>
+</section>
+
+<!-- EDUCATION SECTION -->
+<section class="education-section" id="education">
+  <div class="education-container">
+      <h2 class="education-title">P E N D I D I K A N</h2>
+
+      <div class="timeline-wrapper">
+          <div class="dot-line-vertical"></div>
+
+          <!-- Item 1: SMK (Default Aktif/Terbuka) -->
+          <div class="timeline-item active" onclick="toggleEdu(this)">
+              <div class="timeline-dot"></div>
+              <div class="timeline-content">
+                  <div class="timeline-header">
+                      <h3 class="school-name">SMK NEGERI 2 BALIKPAPAN</h3>
+                      <span class="edu-years">2025 - Sekarang</span>
+                  </div>
+                  <div class="timeline-info">
+                      <p class="edu-major">Rekayasa Perangkat Lunak / Teknik Komputer</p>
+                      <p class="edu-desc">Fokus mempelajari Dasar Pemrograman, Pengembangan Web (HTML, CSS, JavaScript), Algoritma Python, dan Basis Data.</p>
+                  </div>
+              </div>
+          </div>
+
+          <!-- Item 2: SMP -->
+          <div class="timeline-item" onclick="toggleEdu(this)">
+              <div class="timeline-dot"></div>
+              <div class="timeline-content">
+                  <div class="timeline-header">
+                      <h3 class="school-name">SMPK YOS SUDARSO BALIKPAPAN</h3>
+                      <span class="edu-years">2022 - 2025</span>
+                  </div>
+                  <div class="timeline-info">
+                      <p class="edu-desc">Lulus dengan fokus pada ilmu pengetahuan umum dan dasar teknologi informasi.</p>
+                  </div>
+              </div>
+          </div>
+
+          <div class="timeline-item" onclick="toggleEdu(this)">
+              <div class="timeline-dot"></div>
+              <div class="timeline-content">
+                  <div class="timeline-header">
+                      <h3 class="school-name">SDK YOS SUDARSO BALIKPAPAN</h3>
+                      <span class="edu-years">2016 - 2022</span>
+                  </div>
+                  <div class="timeline-info">
+                      <p class="edu-desc">Mempelajari ilmu dasar dan membentuk karakter yang baik.</p>
+                  </div>
+              </div>
+          </div>
+
+      </div>
+  </div>
+</section>
+
+<!-- SKILLS SECTION -->
+<section class="skills-section" id="skills">
+  <div class="skills-container">
+      <h2 class="skills-title">S K I L L S</h2>
+
+      <!-- Item 1: Excel -->
+      <div class="skill-item">
+          <div class="skill-header">
+              <span class="skill-name">Microsoft Excel</span>
+              <div class="progress-bar">
+                  <div class="progress-fill" style="width: 60%;"></div>
+              </div>
+          </div>
+          <p class="skill-desc">Dapat membuat Laporan Keuangan, Pivot Table, Grafik Data, serta menguasai rumus VLOOKUP, IF, & Data Processing.</p>
+      </div>
+
+      <!-- Item 2: Python -->
+      <div class="skill-item">
+          <div class="skill-header">
+              <span class="skill-name">Python</span>
+              <div class="progress-bar">
+                  <div class="progress-fill" style="width: 70%;"></div>
+              </div>
+          </div>
+          <p class="skill-desc">Dapat membuat Aplikasi Kasir (CLI/GUI), Skrip Otomatisasi, Logika Aritmatika, & Pengolahan Data JSON/CSV.</p>
+      </div>
+
+      <!-- Item 3: HTML & CSS -->
+      <div class="skill-item">
+          <div class="skill-header">
+              <span class="skill-name">HTML & CSS</span>
+              <div class="progress-bar">
+                  <div class="progress-fill" style="width: 75%;"></div>
+              </div>
+          </div>
+          <p class="skill-desc">Dapat membuat Layout Web Responsif, Portofolio Interaktif, Dark Mode Styling, & Integrasi Flexbox/Grid.</p>
+      </div>
+
+  </div>
+</section>
+
+<!-- CERTIFICATE SECTION -->
+<section class="certificates-section" id="certificates">
+  <div class="certificates-container">
+      
+      <!-- Header Section: Judul + Link Sertifikat Lainnya -->
+      <div class="certificates-header">
+          <h2 class="certificates-title">S E R T I F I K A T</h2>
+          <a href="https://drive.google.com" target="_blank" class="more-certs-btn">
+              Sertifikat lainnya &rarr;
+          </a>
+      </div>
+
+      <div class="certificates-grid">
+          
+          <!-- Kartu 1 -->
+          <div class="cert-card">
+              <div class="cert-badge">2024</div>
+              <h3 class="cert-title">Web Development Fundamentals</h3>
+              <p class="cert-issuer">Dicoding Indonesia</p>
+              <p class="cert-desc">Memahami dasar HTML, CSS, dan JavaScript untuk pembuatan website responsif.</p>
+              <a href="#" class="cert-link" target="_blank">Lihat Sertifikat &rarr;</a>
+          </div>
+
+          <!-- Kartu 2 -->
+          <div class="cert-card">
+              <div class="cert-badge">2023</div>
+              <h3 class="cert-title">Python Programming Basics</h3>
+              <p class="cert-issuer">Sololearn / Course</p>
+              <p class="cert-desc">Menguasai dasar logika pemrograman, struktur data, dan pengolahan data Python.</p>
+              <a href="#" class="cert-link" target="_blank">Lihat Sertifikat &rarr;</a>
+          </div>
+
+          <!-- Kartu 3 -->
+          <div class="cert-card">
+              <div class="cert-badge">2023</div>
+              <h3 class="cert-title">Microsoft Excel Specialist</h3>
+              <p class="cert-issuer">Lembaga Pelatihan</p>
+              <p class="cert-desc">Menguasai rumus VLOOKUP, Pivot Table, dan analisis data laporan keuangan.</p>
+              <a href="#" class="cert-link" target="_blank">Lihat Sertifikat &rarr;</a>
+          </div>
+
+      </div>
+  </div>
+</section>
+
+<!-- CONTACT SECTION -->
+<section class="contact-section" id="contact">
+  <div class="contact-container">
+      <h2 class="contact-title">C O N T A C T</h2>
+
+      <div class="contact-wrapper">
+          <p class="contact-desc">Tertarik untuk bekerja sama atau punya pertanyaan? Hubungi saya melalui media di bawah ini:</p>
+          
+          <div class="contact-links">
+              <a href="https://mail.google.com/mail/?view=cm&fs=1&to=samuelferdinandpappang@gmail.com" target="_blank" class="contact-card">
+                  <span class="contact-icon">✉</span>
+                  <span class="contact-text">samuelferdinandpappang@gmail.com</span>
+              </a>
+
+              <a href="https://linkedin.com/in/username-kamu" target="_blank" class="contact-card">
+                  <span class="contact-icon">💼</span>
+                  <span class="contact-text">LinkedIn Profile</span>
+              </a>
+
+              <a href="https://github.com/username-kamu" target="_blank" class="contact-card">
+                  <span class="contact-icon">🐙</span>
+                  <span class="contact-text">GitHub Profile</span>
+              </a>
+          </div>
+      </div>
+  </div>
+</section>
+
+    <script src="script.js"></script>
+</body>
+</html>
