@@ -1,0 +1,919 @@
+/* ==========================================
+   RESET & BASE STYLES
+   ========================================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #000000;
+  color: #f8fafc;
+  overflow-x: hidden;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+/* ==========================================
+   NAVBAR
+   ========================================== */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  gap:70%;
+  align-items: center;
+  z-index: 100;
+  background: #000000;
+  -webkit-mask-image: linear-gradient(to bottom, black 60%, transparent 100%);
+  mask-image: linear-gradient(to bottom, black 60%, transparent 100%);
+  margin-top: -15px;
+  min-height: 70px;
+}
+
+.nav-brand {
+  font-size: 1.4rem;
+  font-weight: 900;
+  color: #bcc0c5;
+  text-decoration: none;
+  font-family: 'Trebuchet MS', sans-serif;
+  transition: color 0.3s;
+  white-space: nowrap;
+  margin-top: -5px;
+  left:30%8
+}
+
+.nav-brand:hover {
+  color: #ffffff;
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 1rem;
+  margin-top: 8px;
+  margin-right: 8%;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #aeb9c6;
+  font-size: 1rem;
+  font-weight: 500;
+  transition: color 0.3s;
+  white-space: nowrap;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+  color: #ffffff;
+}
+
+/* ==========================================
+   HERO BANNER
+   ========================================== */
+.hero-banner {
+  position: relative;
+  width: 100%;
+  min-height: 60vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  background-color: #000000;
+  background-image: 
+    radial-gradient(circle at 50% 30%, rgba(26, 27, 27, 0.15) 0%, transparent 60%),
+    linear-gradient(to right, rgba(254, 254, 255, 0.05) 1.2px, transparent 1px),
+    linear-gradient(to bottom, rgba(252, 251, 251, 0.05) 1.2px, transparent 1px);
+  background-size: 100% 100%, 40px 40px, 40px 40px;
+}
+
+.hero-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+}
+
+.hero-line {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+}
+
+.hero-greeting, .hero-greet {
+  font-size: 1.2rem;
+  font-weight: 200;
+  font-family: serif;
+  background: linear-gradient(135deg, #38bdf8, #5799a5, #8b89d3);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.hero-name, .hero-job {
+  font-size: 1.3rem;
+  font-weight: 700;
+  background: linear-gradient(15deg, #a8ead6, #818cf8, #c084fc);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 10px;
+}
+
+/* ILUSTRASI SVG */
+.code-illustration {
+  width: 110px;
+  height: 80px;
+  border-radius: 10px;
+  box-shadow: 0 10px 30px rgba(37, 37, 37, 0.3);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.code-illustration svg {
+  width: 160px;
+  height: 160px;
+}
+
+/* ANIMASI DOTS */
+svg { overflow: visible; }
+.dot { transform-box: fill-box; transform-origin: center; }
+
+@keyframes moveVertical { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-3px); } }
+@keyframes moveHorizontal { 0%, 100% { transform: translateX(0); } 50% { transform: translateX(3px); } }
+@keyframes moveDiagonal { 0%, 100% { transform: translate(0, 0); } 50% { transform: translate(2px, -3px); } }
+
+.dot-verti { animation: moveVertical 3s ease-in-out infinite; }
+.dot-horiz { animation: moveHorizontal 3.8s ease-in-out infinite; }
+.dot-diago { animation: moveDiagonal 3.2s ease-in-out infinite; }
+
+/* ==========================================
+   COUNTER SECTION
+   ========================================== */
+.counter-section {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 15px;
+}
+
+.counter-container {
+  background: #1E1E2E;
+  border: 1px solid rgba(3, 44, 94, 0.9);
+  padding: 5px 20px;
+  border-radius: 100px;
+  box-shadow: 0 10px 30px rgba(18, 8, 157, 0.45);
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  gap: 15px;
+  width: 100%;
+  max-width: 600px;
+}
+
+.counter-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.counter-number {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #0284c7;
+}
+
+.counter-label {
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: #6091e4;
+  text-align: center;
+}
+
+.counter-divider {
+  width: 1px;
+  height: 50px;
+  background-color: rgba(137, 195, 239, 0.9);
+}
+
+/* ==========================================
+   TENTANG SAYA
+   ========================================== */
+.tentang {
+  width: 100%;
+  display: flex;
+  padding: 40px 20px;
+}
+
+.tentang-container {
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.tentang-judul {
+  font-size: 1rem;
+  margin-bottom: 5px;
+  color: #38bdf8;
+  text-align: left;
+}
+
+.tentang-deskripsi {
+  color: #cbd5e1;
+  line-height: 1.4;
+  font-size: 0.85rem;
+}
+
+/* ==========================================
+   PROJECT SECTION
+   ========================================== */
+.projects-section {
+  width: 100%;
+  padding: 40px 20px;
+}
+
+.projects-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.projects-title {
+  font-size: 1rem;
+  color: #38bdf8;
+  letter-spacing: 2px;
+  font-weight: 600;
+  margin-bottom: 5px;
+  text-align: center;
+}
+
+.more-projects-wrapper {
+  margin-bottom: 25px;
+  text-align: center;
+}
+
+.more-projects-btn {
+  text-decoration: none;
+  color: #94a3b8;
+  font-size: 0.85rem;
+  font-weight: 500;
+  transition: color 0.3s ease, transform 0.2s ease;
+  display: inline-block;
+}
+
+.more-projects-btn:hover {
+  color: #38bdf8;
+  transform: translateX(3px);
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+}
+
+/* KOTAK KARTU (Dengan border menyala) */
+.project-card {
+  background: #0f172a;
+  border: 1px solid rgba(56, 189, 248, 0.3);
+  border-radius: 12px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+  border-color: #38bdf8;
+  box-shadow: 0 8px 25px rgba(56, 189, 248, 0.2);
+}
+
+.card-content h3 {
+  font-size: 1.1rem;
+  color: #f8fafc;
+  margin-bottom: 8px;
+}
+
+.card-content h3 span {
+  font-size: 0.85rem;
+  color: #38bdf8;
+  font-weight: normal;
+}
+
+.card-content p {
+  color: #cbd5e1;
+  font-size: 0.85rem;
+  line-height: 1.5;
+}
+
+.card-footer {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin-top: 20px;
+  padding-top: 12px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.view-btn {
+  text-decoration: none;
+  color: #38bdf8;
+  font-size: 0.85rem;
+  font-weight: 600;
+  transition: color 0.3s ease, transform 0.2s ease;
+}
+
+.view-btn:hover {
+  color: #818cf8;
+  transform: translateX(3px);
+}
+
+/* ==========================================
+   EDUCATION SECTION
+========================================== */
+.education-section {
+  width: 100%;
+  padding: 60px 20px;
+  background: #000000; /* Background gelap modern */
+  color: #f8fafc;
+}
+
+.education-container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.education-title {
+  font-size: 1rem;
+  color: #38bdf8;
+  letter-spacing: 1px;
+  text-align: center;
+  margin-bottom: 40px;
+  font-weight: 600;
+}
+
+/* TIMELINE */
+.timeline-wrapper {
+  position: relative;
+  padding-left: 32px;
+}
+
+/* Garis Vertikal Presisi */
+.dot-line-vertical {
+  position: absolute;
+  left: 5.5px;
+  top: 10px;
+  bottom: 10px;
+  width: 2px;
+  background: rgba(56, 189, 248, 0.25);
+}
+
+/* Item Timeline */
+.timeline-item {
+  position: relative;
+  margin-bottom: 24px;
+  cursor: pointer;
+}
+
+.timeline-dot {
+  position: absolute;
+  left: -32px;
+  top: 18px;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  border: 2px solid #38bdf8;
+  background: #0f172a;
+  z-index: 2;
+  transition: all 0.3s ease;
+}
+
+/* Card Content */
+.timeline-content {
+  background: rgba(30, 41, 59, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 12px;
+  padding: 20px;
+  backdrop-filter: blur(8px);
+  transition: all 0.3s ease;
+}
+
+.timeline-header {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.school-name {
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: #f8fafc;
+  transition: color 0.3s ease;
+}
+
+.edu-years {
+  width: fit-content;
+  background: rgba(56, 189, 248, 0.1);
+  color: #38bdf8;
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  font-weight: 500;
+}
+
+/* Konten Tersembunyi (Animasi Smooth) */
+.timeline-info {
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transition: max-height 0.4s cubic-bezier(0, 1, 0, 1), opacity 0.3s ease, margin-top 0.3s ease;
+}
+
+.edu-major {
+  color: #818cf8;
+  font-size: 0.88rem;
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+
+.edu-desc {
+  color: #94a3b8;
+  font-size: 0.85rem;
+  line-height: 1.6;
+}
+
+/* STATE AKTIF & HOVER */
+.timeline-item:hover .timeline-content {
+  border-color: rgba(56, 189, 248, 0.3);
+  transform: translateY(-2px);
+}
+
+.timeline-item.active .timeline-dot {
+  background: #38bdf8;
+  box-shadow: 0 0 12px #38bdf8;
+  transform: scale(1.1);
+}
+
+.timeline-item.active .timeline-content {
+  background: rgba(30, 41, 59, 0.95);
+  border-color: rgba(56, 189, 248, 0.5);
+}
+
+.timeline-item.active .school-name {
+  color: #38bdf8;
+}
+
+.timeline-item.active .timeline-info {
+  max-height: 200px;
+  opacity: 1;
+  margin-top: 14px;
+  padding-top: 14px;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+
+
+/* ==========================================
+   SKILLS SECTION (PROGRESS BAR LEVEL)
+   ========================================== */
+.skills-section {
+  width: 100%;
+  padding: 40px 20px;
+}
+
+.skills-container {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.skills-title {
+  font-size: 1rem;
+  color: #38bdf8;
+  letter-spacing: 2px;
+  font-weight: 600;
+  margin-bottom: 25px;
+  text-align: center;
+}
+
+/* Kotak Tiap Skill */
+.skill-item {
+  background: #0f172a;
+  border: 1px solid rgba(56, 189, 248, 0.2);
+  border-radius: 12px;
+  padding: 20px;
+  margin-bottom: 15px;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.skill-item:hover {
+  border-color: #38bdf8;
+  box-shadow: 0 8px 25px rgba(56, 189, 248, 0.15);
+}
+
+/* Baris Judul Skill & Progress Bar */
+.skill-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+  margin-bottom: 12px;
+}
+
+.skill-name {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #f8fafc;
+  white-space: nowrap;
+}
+
+/* Kotak Persentase (Progress Bar) */
+.progress-bar {
+  width: 50%;
+  height: 10px;
+  background: #1e293b;
+  border-radius: 8px;
+  overflow: hidden;
+  border: 1px solid rgba(56, 189, 248, 0.3);
+}
+
+.progress-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #38bdf8, #818cf8);
+  border-radius: 10px;
+}
+
+/* Deskripsi Hasil Karya */
+.skill-desc {
+  color: #cbd5e1;
+  font-size: 0.85rem;
+  line-height: 1.5;
+}
+
+
+/* ==========================================
+   SECTION SERTIFIKAT (FULL & RESPONSIVE)
+   ========================================== */
+.certificates-section {
+  width: 100%;
+  padding: 30px 15px;
+}
+
+.certificates-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Header (Judul Tengah & Tombol Kanan) */
+.certificates-header {
+  justify-content: flex-start;
+  align-items: center;
+  margin-bottom: 25px;
+  width: 100%;
+}
+
+.certificates-title {
+  font-size: 1rem;
+  color: #38bdf8;
+  letter-spacing: 2px;
+  font-weight: 600;
+  margin: 0;
+  text-align: center;
+}
+
+.more-certs-btn {
+  position: absolute;
+  right: 0;
+  text-decoration: none;
+  color: #94a3b8;
+  font-size: 0.8rem;
+  font-weight: 500;
+  transition: color 0.3s ease, transform 0.2s ease;
+  margin-top:0px;
+  right: 10px;
+}
+
+.more-certs-btn:hover {
+  color: #38bdf8;
+  transform: translateX(3px);
+}
+
+/* Grid & Kolom Sertifikat */
+.certificates-grid {
+  display: grid;
+  grid-template-columns: 1fr; /* 1 Kolom di HP */
+  gap: 15px;
+}
+
+/* Box Kartu Sertifikat */
+.cert-card {
+  background: #0f172a;
+  border: 1px solid rgba(56, 189, 248, 0.2);
+  border-radius: 12px;
+  padding: 18px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.cert-card:hover {
+  transform: translateY(-4px);
+  border-color: #38bdf8;
+  box-shadow: 0 8px 20px rgba(56, 189, 248, 0.15);
+}
+
+.cert-badge {
+  align-self: flex-start;
+  font-size: 0.7rem;
+  color: #38bdf8;
+  background: rgba(56, 189, 248, 0.1);
+  padding: 2px 8px;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  font-weight: 600;
+}
+
+.cert-title {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 4px;
+}
+
+.cert-issuer {
+  font-size: 0.8rem;
+  color: #818cf8;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.cert-desc {
+  font-size: 0.8rem;
+  color: #cbd5e1;
+  line-height: 1.4;
+  margin-bottom: 15px;
+}
+
+.cert-link {
+  text-decoration: none;
+  font-size: 0.8rem;
+  color: #38bdf8;
+  font-weight: 600;
+  transition: color 0.3s ease;
+  align-self: flex-start;
+}
+
+.cert-link:hover {
+  color: #818cf8;
+}
+
+/* ==========================================
+   SECTION CONTACT (RESPONSIVE)
+   ========================================== */
+.contact-section {
+  width: 100%;
+  padding: 30px 15px;
+}
+
+.contact-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Judul disamakan persis */
+.contact-title {
+  font-size: 1rem;
+  color: #38bdf8;
+  letter-spacing: 3px;
+  font-weight: 600;
+  margin-bottom: 25px;
+  text-align: center;
+}
+
+.contact-desc {
+  font-size: 0.85rem;
+  color: #cbd5e1;
+  line-height: 1.5;
+  margin-bottom: 20px;
+}
+
+/* Container Link Contact */
+.contact-links {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.contact-card {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: #0f172a;
+  border: 1px solid rgba(56, 189, 248, 0.2);
+  padding: 12px 16px;
+  border-radius: 10px;
+  text-decoration: none;
+  transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contact-card:hover {
+  transform: translateY(-2px);
+  border-color: #38bdf8;
+  box-shadow: 0 4px 15px rgba(56, 189, 248, 0.15);
+}
+
+.contact-icon {
+  font-size: 1.1rem;
+}
+
+.contact-text {
+  font-size: 0.85rem;
+  color: #ffffff;
+  font-weight: 500;
+}
+
+/* ==========================================
+   💻 LAPTOP/DESKTOP (> 768px)
+   ========================================== */
+@media (min-width: 768px) {
+  .navbar { padding: 1.5rem 8%; }
+  .nav-brand {
+    font-size: 1.6rem;}
+  .nav-links { gap: 2.5rem; }
+  .nav-links a { font-size: 1.1rem; }
+
+  .hero-banner {
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    height: 100vh;
+    padding: 0 8%;
+    gap: 0;
+  }
+
+  .hero-content {
+    align-items: flex-start;
+    text-align: left;
+    width: auto;
+  }
+
+  .hero-line { 
+    justify-content: flex-start; 
+    gap: 15px;
+  }
+  .hero-greeting, .hero-greet { font-size: 3rem; }
+  .hero-name, .hero-job { 
+    font-size: 4rem;
+    margin-bottom: 18px;
+  }
+
+  .code-illustration {
+    width: 340px;
+    height: 270px;
+  }
+
+  .code-illustration svg {
+    width: 260px;
+    height: 260px;
+  }
+
+  .counter-container {
+    padding: 10px 50px;
+    gap: 60px;
+  }
+
+  .counter-number { font-size: 2.2rem; }
+  .counter-label { font-size: 1.1rem; }
+  
+  .tentang-judul { 
+    text-align: center; 
+    font-size: 1.8rem;
+    letter-spacing: 2.9px;
+    margin-bottom: 15px;
+    font-weight: 150;
+  }
+  
+  .tentang-deskripsi {
+    width: 100%;
+    max-width: 100%;
+    display: flex;
+    justify-content: center;
+    font-size: 1.1rem;
+    text-align: center;
+  }
+
+  .projects-title {
+    text-align: center;
+    font-size: 1.8rem;
+    letter-spacing: 2.9px;
+    font-weight: 150;
+  }
+
+  .more-projects-wrapper {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+
+  .more-projects-btn { font-size: 0.95rem; }
+
+  .projects-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+  }
+
+  .card-content h3 { font-size: 1.25rem; }
+  .card-content p { font-size: 0.95rem; }
+  .view-btn { font-size: 0.95rem; }
+
+  .skills-title {
+    text-align: center;
+    font-size: 1.8rem;
+    letter-spacing: 2.9px;
+    font-weight: 150;
+    margin-bottom: 30px;
+  }
+
+  .skill-name { font-size: 1.1rem; }
+  .skill-desc { font-size: 0.95rem; }
+  .progress-bar { width: 60%; height: 12px; }
+
+  .education-title {
+    font-size: 1.8rem;
+    text-align: center;
+    font-weight: 200;
+  }
+
+  .timeline-header {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .school-name {
+    font-size: 1.2rem;
+  }
+
+  .edu-years {
+    font-size: 0.85rem;
+    padding: 5px 14px;
+  }   
+
+   .certificates-section {
+    padding: 40px 20px;
+  }
+
+  .certificates-header {
+    margin-bottom: 35px;
+  }
+
+  .more-certs-btn {
+    font-size: 0.85rem;
+  }
+
+  /* Kunci 3 Kolom Menyamping di Laptop (1x3) */
+  .certificates-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+  .certificates-title {
+    font-size: 1.8rem;
+    letter-spacing: 2.9px;
+    font-weight: 150;
+    text-align: center;
+  }
+
+  .contact-section {
+    padding: 40px 20px;
+  }
+
+  .contact-title {
+    margin-bottom: 35px;
+  }
+
+  .contact-links {
+    flex-direction: row;
+    gap: 20px;
+  }
+
+  .contact-card {
+    flex: 1;
+    justify-content: center;
+  }
+
+}

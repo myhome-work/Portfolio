@@ -1,0 +1,53 @@
+[
+ 
+ {
+    "title": "Code Kasir",
+    "lang": "Python",
+    "desc": "Aplikasi kasir CLI untuk mencatat transaksi penjualan, menghitung total belanja otomatis, dan mencetak struk.",
+    "link": "https://github.com/username/code-kasir"
+  },
+  {
+    "title": "Sistem Nilai Siswa",
+    "lang": "Python",
+    "desc": "Program pengelolaan data nilai siswa dengan fitur menghitung rata-rata, status kelulusan, dan menyimpan data.",
+    "link": "https://github.com/username/sistem-nilai"
+  },
+  {
+    "title": "Kalkulator Sederhana",
+    "lang": "Python",
+    "desc": "Aplikasi kalkulator aritmatika dasar berbasis Python dengan antarmuka yang ramah pengguna.",
+    "link": "https://github.com/username/kalkulator-python"
+  },
+  {
+    "title": "Web Portofolio",
+    "lang": "HTML/CSS/JS",
+    "desc": "Situs web portofolio pribadi responsif yang menampilkan profil, keahlian, dan daftar proyek.",
+    "link": "https://github.com/username/portofolio"
+  },
+
+
+  {
+    "title": "Code Kasir",
+    "lang": "Python",
+    "desc": "Aplikasi kasir CLI untuk mencatat transaksi penjualan, menghitung total belanja otomatis, dan mencetak struk.",
+    "link": "https://github.com/username/code-kasir"
+  },
+  {
+    "title": "Sistem Nilai Siswa",
+    "lang": "Python",
+    "desc": "Program pengelolaan data nilai siswa dengan fitur menghitung rata-rata, status kelulusan, dan menyimpan data.",
+    "link": "https://github.com/username/sistem-nilai"
+  },
+  {
+    "title": "Kalkulator Sederhana",
+    "lang": "Python",
+    "desc": "Aplikasi kalkulator aritmatika dasar berbasis Python dengan antarmuka yang ramah pengguna.",
+    "link": "https://github.com/username/kalkulator-python"
+  },
+  {
+    "title": "Web Portofolio",
+    "lang": "HTML/CSS/JS",
+    "desc": "Situs web portofolio pribadi responsif yang menampilkan profil, keahlian, dan daftar proyek.",
+    "link": "https://github.com/username/portofolio"
+  }
+]
