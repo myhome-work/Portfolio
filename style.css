@@ -513,58 +513,109 @@ svg { overflow: visible; }
 }
 
 /* Kotak Tiap Skill */
-.skill-item {
-  background: #0f172a;
-  border: 1px solid rgba(56, 189, 248, 0.2);
-  border-radius: 12px;
-  padding: 20px;
-  margin-bottom: 15px;
-  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+/* ==========================================
+   1. UTAMA (Tampilan Layar HP - Default)
+   ========================================== */
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Tetap 2 kolom ringkas di HP */
+  gap: 12px;                             /* Jarak antar card lebih rapat di HP */
+  width: 80%;                           /* Memenuhi lebar layar HP */
+  padding: 0 12px;                       /* Jeda tipis di pinggir layar HP */
+  box-sizing: border-box;
 }
 
-.skill-item:hover {
-  border-color: #38bdf8;
-  box-shadow: 0 8px 25px rgba(56, 189, 248, 0.15);
-}
-
-/* Baris Judul Skill & Progress Bar */
-.skill-header {
+.skill-card {
+  position: relative;
+  background-color: #0f172a;
+  border: 1px solid #1f4c8d;
+  border-radius: 10px;
+  padding: 16px 10px 10px 10px;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: space-between;
-  gap: 15px;
-  margin-bottom: 12px;
 }
 
-.skill-name {
-  font-size: 1rem;
-  font-weight: 600;
-  color: #f8fafc;
-  white-space: nowrap;
+/* Badge Level di Pojok Kanan */
+.level-badge {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  font-size: 0.65rem;                   /* Ukuran font ringkas untuk HP */
+  padding: 2px 6px;
+  border-radius: 4px;
+  background-color: #21262d;
+  color: #8b949e;
 }
 
-/* Kotak Persentase (Progress Bar) */
-.progress-bar {
-  width: 50%;
-  height: 10px;
-  background: #1e293b;
-  border-radius: 8px;
-  overflow: hidden;
-  border: 1px solid rgba(56, 189, 248, 0.3);
+/* Area Logo SVG */
+.skill-icon-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  min-height: 45px;
 }
 
-.progress-fill {
-  height: 100%;
-  background: linear-gradient(90deg, #38bdf8, #818cf8);
-  border-radius: 10px;
+.skill-icon {
+  width: 36px;                           /* Ukuran logo pas untuk layar HP */
+  height: 36px;
+  object-fit: contain;
 }
 
-/* Deskripsi Hasil Karya */
-.skill-desc {
-  color: #cbd5e1;
+/* Area Nama Skill dengan Garis Pemisah */
+.skill-title-wrapper {
+  width: 100%;
+  text-align: center;
+  padding-top: 8px;
+  border-top: 1px solid #30363d;        /* Garis pembeda antara nama & logo */
+}
+
+.skill-title {
   font-size: 0.85rem;
-  line-height: 1.5;
+  font-weight: 600;
+  color: #f0f6fc;
+  margin: 0;
 }
+
+  .skills-grid {
+    gap: 20px;
+    max-width: 1100px;                    /* Melebar penuh di laptop tanpa space kaku */
+    margin: 0 auto;
+    padding: 0 24px;
+  }
+
+  .skill-card {
+    padding: 24px 16px 16px 16px;
+    border-radius: 12px;
+  }
+
+  .level-badge {
+    top: 12px;
+    right: 12px;
+    font-size: 0.75rem;
+    padding: 4px 8px;
+  }
+
+  .skill-icon-wrapper {
+    min-height: 60px;
+  }
+
+  .skill-icon {
+    width: 48px;                          /* Logo membesar otomatis di layar laptop */
+    height: 48px;
+  }
+
+  .skill-title-wrapper {
+    padding-top: 12px;
+  }
+
+  .skill-title {
+    font-size: 1rem;
+  }
+
 
 
 /* ==========================================
@@ -634,7 +685,6 @@ svg { overflow: visible; }
 }
 
 .cert-card:hover {
-  transform: translateY(-4px);
   border-color: #38bdf8;
   box-shadow: 0 8px 20px rgba(56, 189, 248, 0.15);
 }
@@ -702,51 +752,35 @@ svg { overflow: visible; }
   font-size: 1rem;
   color: #38bdf8;
   letter-spacing: 3px;
-  font-weight: 600;
+  font-weight: 200;
   margin-bottom: 25px;
   text-align: center;
 }
 
 .contact-desc {
-  font-size: 0.85rem;
+  font-size: 0.9rem;
   color: #cbd5e1;
   line-height: 1.5;
   margin-bottom: 20px;
+  gap: 10px;
 }
 
 /* Container Link Contact */
 .contact-links {
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
+  flex-direction:row;
+  gap: 220px;
 }
 
-.contact-card {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  background: #0f172a;
-  border: 1px solid rgba(56, 189, 248, 0.2);
-  padding: 12px 16px;
-  border-radius: 10px;
-  text-decoration: none;
-  transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
-}
-
-.contact-card:hover {
-  transform: translateY(-2px);
-  border-color: #38bdf8;
-  box-shadow: 0 4px 15px rgba(56, 189, 248, 0.15);
-}
 
 .contact-icon {
   font-size: 1.1rem;
 }
 
 .contact-text {
-  font-size: 0.85rem;
+  font-size: 0.95rem;
   color: #ffffff;
   font-weight: 500;
+  gap:10%;
 }
 
 /* ==========================================
@@ -780,7 +814,6 @@ svg { overflow: visible; }
   .hero-greeting, .hero-greet { font-size: 3rem; }
   .hero-name, .hero-job { 
     font-size: 4rem;
-    margin-bottom: 18px;
   }
 
   .code-illustration {
@@ -904,6 +937,7 @@ svg { overflow: visible; }
 
   .contact-title {
     margin-bottom: 35px;
+    font-size: 1.8rem;
   }
 
   .contact-links {
@@ -911,9 +945,40 @@ svg { overflow: visible; }
     gap: 20px;
   }
 
-  .contact-card {
-    flex: 1;
-    justify-content: center;
+ .skills-grid {
+    gap: 20px;
+    max-width: 1100px;                    /* Melebar penuh di laptop tanpa space kaku */
+    margin: 0 auto;
+    padding: 0 24px;
+  }
+
+  .skill-card {
+    padding: 24px 16px 16px 16px;
+    border-radius: 12px;
+  }
+
+  .level-badge {
+    top: 12px;
+    right: 12px;
+    font-size: 0.75rem;
+    padding: 4px 8px;
+  }
+
+  .skill-icon-wrapper {
+    min-height: 60px;
+  }
+
+  .skill-icon {
+    width: 48px;                          /* Logo membesar otomatis di layar laptop */
+    height: 48px;
+  }
+
+  .skill-title-wrapper {
+    padding-top: 12px;
+  }
+
+  .skill-title {
+    font-size: 1rem;
   }
 
 }
